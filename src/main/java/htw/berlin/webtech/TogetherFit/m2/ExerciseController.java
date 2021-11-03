@@ -14,7 +14,7 @@ public class ExerciseController {
         return service.save(exercise);
     }
 
-    @GetMapping("/exercise{id}")
+    @GetMapping("/exercise/{id}")
     public Exercise getExercise(@PathVariable String id) {
         Long exerciseId = Long.parseLong(id);
         return service.get(exerciseId);
