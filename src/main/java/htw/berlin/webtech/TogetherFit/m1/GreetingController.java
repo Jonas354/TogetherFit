@@ -1,4 +1,4 @@
-package htw.berlin.webtech.TogetherFit;
+package htw.berlin.webtech.TogetherFit.m1;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
