@@ -14,6 +14,6 @@ public class ExerciseService {
     }
 
     public Exercise get(Long id) {
-        return repo.findById(id).orElseThrow(() -> new RuntimeException());
+        return repo.findById(id).orElseThrow(() -> new ObjectNotFoundException("Object Not Found"));
     }
 }

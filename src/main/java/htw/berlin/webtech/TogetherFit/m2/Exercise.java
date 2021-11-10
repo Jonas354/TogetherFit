@@ -1,9 +1,6 @@
 package htw.berlin.webtech.TogetherFit.m2;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Exercise {
@@ -13,7 +10,8 @@ public class Exercise {
     private Long id;
     private String name;
 
-    public Exercise() {}
+    // just for Hibernate
+    protected Exercise() {}
 
     public Exercise(String name) {
         this.name = name;
