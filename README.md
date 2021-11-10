@@ -1,3 +1,5 @@
+[![CI](https://github.com/Jonas354/TogetherFit/actions/workflows/tests.yml/badge.svg)](https://github.com/Jonas354/TogetherFit/actions/workflows/tests.yml)
+
 # TogetherFit
 Together Fit Eine Webanwendung, die Sportübungen für unterschiedliche Muskelgruppen bietet. Sie basiert auf dem Community-Prinzip, nach dem jeder Nutzer Übungen hochladen kann und von den Übungen der Anderen profitiert. Das Ende für eintönige Workouts!
 
