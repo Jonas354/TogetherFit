@@ -1,6 +1,7 @@
 package htw.berlin.webtech.TogetherFit;
 
 import htw.berlin.webtech.TogetherFit.m2.Exercise;
+import htw.berlin.webtech.TogetherFit.m2.ExerciseEntity;
 import htw.berlin.webtech.TogetherFit.m2.ExerciseRepository;
 import htw.berlin.webtech.TogetherFit.m2.ExerciseService;
 import org.junit.jupiter.api.DisplayName;
@@ -24,12 +25,12 @@ public class ExerciseServiceTest {
     @Test
     @DisplayName("should find exersice by id")
     void testGet() {
-        var ex1 = new Exercise("Jumping Jacks");
-        //var ex2 = new Exercise("Headstand");
+        var ex1 = new ExerciseEntity("Jumping Jacks");
+        ex1.setId(99L);
         doReturn(Optional.of(ex1)).when(repository).findById(99L);
-        doReturn(Optional.of(ex1)).when(repository).findById(100L);
+       // doReturn(Optional.of(ex1)).when(repository).findById(100L);
 
-        Exercise actualExercise = service.get(99L);
+        Exercise actualExercise = service.findById(99L);
 
         assertEquals(actualExercise.getName(),"Jumping Jacks");
     }
