@@ -1,12 +1,23 @@
 package htw.berlin.webtech.TogetherFit.m2;
 
-public class Exercise {
+import javax.persistence.*;
 
+
+@Entity(name= "exercises")
+public class ExerciseEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name= "id")
     private Long id;
+
+    @Column(name= "name", nullable = false)
     private String name;
 
-    public Exercise(long id, String name) {
-        this.id=id;
+    // just for Hibernate
+    protected  ExerciseEntity() {}
+
+    public ExerciseEntity(String name) {
         this.name = name;
     }
 
@@ -25,12 +36,4 @@ public class Exercise {
     public void setName(String name) {
         this.name = name;
     }
-
-    @Override
-    public String toString() {
-        return "Exercise{" +
-                "id=" + id +
-                ", name=" + name + "}";
-    }
-
 }

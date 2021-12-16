@@ -11,8 +11,7 @@ class ExerciseTest {
 
 		String name = "Bizeps Curls";
 
-		Exercise exercise = new Exercise(name);
-		exercise.setId(10L);
+		Exercise exercise = new Exercise(10L,name);
 
 		String expected = "Exercise{id=10, name=Bizeps Curls}";
 
