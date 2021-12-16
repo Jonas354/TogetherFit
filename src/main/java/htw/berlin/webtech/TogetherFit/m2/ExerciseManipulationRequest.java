@@ -8,6 +8,8 @@ public class ExerciseManipulationRequest {
         this.name = name;
     }
 
+    public ExerciseManipulationRequest() {}
+
     public String getName() {
         return name;
     }
