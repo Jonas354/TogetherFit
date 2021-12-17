@@ -14,6 +14,6 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addMapping("/**")
                 .allowedMethods("*")
                 .allowedOrigins("http://localhost:3000",
-                                "https://https://togetherfit-frontend.herokuapp.com");
+                                "https://togetherfit-frontend.herokuapp.com");
     }
 }
