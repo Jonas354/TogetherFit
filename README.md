@@ -21,7 +21,7 @@ Suche/ Filter - Kategorie, Hilfsmittel
 
 # Tests
 Backend 3-4 - Entitäten und Methoden -> Backend
-Frontend 3-4 - async + await (automatisiert auf GitHub)
+Frontend 3-4 - async + await (automatisiert auf GitHub, Positiver Fall und negativer Fall pro Komponente – 10 Tests ist richtig gut!)
 
 
 # Design
