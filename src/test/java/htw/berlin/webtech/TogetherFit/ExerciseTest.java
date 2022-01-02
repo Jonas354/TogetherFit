@@ -10,10 +10,12 @@ class ExerciseTest {
 	void testToString() {
 
 		String name = "Bizeps Curls";
+        String category = "arms";
+        String difficulty = "low";
 
-		Exercise exercise = new Exercise(10L,name);
+		Exercise exercise = new Exercise(10L,name, category, difficulty, true);
 
-		String expected = "Exercise{id=10, name=Bizeps Curls}";
+		String expected = "Exercise{id=10, name=Bizeps Curls, category=arms, difficulty=low, gear=true}";
 
 		String actual = exercise.toString();
 
