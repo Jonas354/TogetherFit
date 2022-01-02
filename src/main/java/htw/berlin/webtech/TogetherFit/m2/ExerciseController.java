@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Collection;
@@ -33,9 +34,13 @@ public class ExerciseController {
 
    @PostMapping(path = "/exercises")
     public ResponseEntity<Void> createExercise(@RequestBody ExerciseManipulationRequest request) throws URISyntaxException {
+       // add "@Valid"
         var exercise = exerciseService.create(request);
         URI uri = new URI("/exercises/" + exercise.getId());
-        return ResponseEntity.created(uri).build();
+        return ResponseEntity
+                .created(uri)
+                .build();
+        //.header("Access-Control-Expose-Headers", "Location")
    }
 
    @PutMapping(path = "/exercises/{id}")

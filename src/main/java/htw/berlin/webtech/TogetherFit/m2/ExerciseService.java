@@ -27,7 +27,10 @@ public class ExerciseService {
     }
 
     public Exercise create(ExerciseManipulationRequest request) {
-        var exerciseEntity = new ExerciseEntity(request.getName());
+        var exerciseEntity = new ExerciseEntity(request.getName(),
+                request.getCategory(),
+                request.getDifficulty(),
+                request.getGear());
         exerciseEntity = exerciseRepository.save(exerciseEntity);
         return transformEntity(exerciseEntity);
     }
@@ -55,7 +58,10 @@ public class ExerciseService {
     private Exercise transformEntity(ExerciseEntity exerciseEntity) {
         return new Exercise(
                 exerciseEntity.getId(),
-                exerciseEntity.getName()
+                exerciseEntity.getName(),
+                exerciseEntity.getCategory(),
+                exerciseEntity.getDifficulty(),
+                exerciseEntity.getGear()
         );
     }
 

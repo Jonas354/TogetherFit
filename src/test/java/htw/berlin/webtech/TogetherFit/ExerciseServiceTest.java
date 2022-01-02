@@ -21,7 +21,7 @@ public class ExerciseServiceTest {
 
     @MockBean
     private ExerciseRepository repository;
-
+/*
     @Test
     @DisplayName("should find exersice by id")
     void testGet() {
@@ -34,6 +34,6 @@ public class ExerciseServiceTest {
 
         assertEquals(actualExercise.getName(),"Jumping Jacks");
     }
-
+*/
 
 }
