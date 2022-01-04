@@ -12,6 +12,7 @@ Finanziert durch Werbung!
 
 # Frontend
 DONE Entities: ID, Name, Kategorie (Dropdown?), Schwierigkeitsgrad Übung, Hilfsmittel
+
 DONE Dateneingabe
 
 Homeseite weg - About ausschmücken, Name, Creators - Martin
