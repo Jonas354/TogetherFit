@@ -11,23 +11,20 @@ Datenbank zur Speicherung der Übungen (Validierung zwecks Doppelungen, Klassifi
 Finanziert durch Werbung!
 
 # Frontend
-Entities: ID, Name, Kategorie (Dropdown?), Unterkategorie (Dropdown), Schwierigkeitsgrad Übung, Hilfsmittel, Erklärung
-Dateneingabe
+DONE Entities: ID, Name, Kategorie (Dropdown?), Schwierigkeitsgrad Übung, Hilfsmittel
+DONE Dateneingabe
+
+Homeseite weg - About ausschmücken, Name, Creators - Martin
 
 # Featues
-Inputvalidierung - Dropdown, schon vorhanden in Database?
-dynamische Zusatzfelder - Hilfsmittel ja/nein und zusätzliches Feld
-Suche/ Filter - Kategorie, Hilfsmittel
+Inputvalidierung - Dropdown - Jonas
+Suche/ Filter - Kategorie Category - Martin
 
 # Tests
-Backend 3-4 - Entitäten und Methoden -> Backend
-Frontend 3-4 - async + await (automatisiert auf GitHub, Positiver Fall und negativer Fall pro Komponente – 10 Tests ist richtig gut!)
+Backend 3-4 - Entitäten und Methoden -> Backend - Jonas
+Backend Validierung - Jonas
+Frontend 3-4 - async + await (automatisiert auf GitHub, Positiver Fall und negativer Fall pro Komponente – 10 Tests ist richtig gut!) - Martin
 
 
 # Design
 Logo, Beschreibung
-
-
-Home
-About
-Exercises
