@@ -1,26 +1,52 @@
 package htw.berlin.webtech.TogetherFit;
 
-import htw.berlin.webtech.TogetherFit.m2.Exercise;
-import htw.berlin.webtech.TogetherFit.m2.ExerciseEntity;
+
 import htw.berlin.webtech.TogetherFit.m2.ExerciseRepository;
 import htw.berlin.webtech.TogetherFit.m2.ExerciseService;
+import org.assertj.core.api.WithAssertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.Optional;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.doReturn;
-@SpringBootTest
-public class ExerciseServiceTest {
-    @Autowired
-    private ExerciseService service;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.verifyNoMoreInteractions;
 
-    @MockBean
+@ExtendWith(MockitoExtension.class)
+public class ExerciseServiceTest implements WithAssertions {
+
+    @Mock
     private ExerciseRepository repository;
+
+    @InjectMocks
+    private ExerciseService underTest;
+
+    @Test
+    @DisplayName("should return true if delete was successful")
+    void returnTrueForSuccessfulDeletion() {
+        Long givenId = 123L;
+        doReturn(true).when(repository).existsById(givenId);
+
+        boolean result = underTest.deleteById(givenId);
+
+        verify(repository).deleteById(givenId);
+        assertThat(result).isTrue();
+    }
+
+    @Test
+    @DisplayName("should return false if delete was not successful (exercise dosen't exists)")
+    void returnFalseForNotSuccessfulDeletion() {
+        Long givenId = 123L;
+        doReturn(false).when(repository).existsById(givenId);
+
+        boolean result = underTest.deleteById(givenId);
+
+        verifyNoMoreInteractions(repository);
+        assertThat(result).isFalse();
+    }
 /*
     @Test
     @DisplayName("should find exersice by id")

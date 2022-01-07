@@ -55,7 +55,7 @@ public class ExerciseService {
         return true;
     }
 
-    private Exercise transformEntity(ExerciseEntity exerciseEntity) {
+    public Exercise transformEntity(ExerciseEntity exerciseEntity) {
         return new Exercise(
                 exerciseEntity.getId(),
                 exerciseEntity.getName(),
