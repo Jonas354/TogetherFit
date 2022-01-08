@@ -1,6 +1,8 @@
 package htw.berlin.webtech.TogetherFit;
 
 
+import htw.berlin.webtech.TogetherFit.m2.Exercise;
+import htw.berlin.webtech.TogetherFit.m2.ExerciseEntity;
 import htw.berlin.webtech.TogetherFit.m2.ExerciseRepository;
 import htw.berlin.webtech.TogetherFit.m2.ExerciseService;
 import org.assertj.core.api.WithAssertions;
@@ -9,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.mockito.Mockito.doReturn;
@@ -47,19 +50,4 @@ public class ExerciseServiceTest implements WithAssertions {
         verifyNoMoreInteractions(repository);
         assertThat(result).isFalse();
     }
-/*
-    @Test
-    @DisplayName("should find exersice by id")
-    void testGet() {
-        var ex1 = new ExerciseEntity("Jumping Jacks");
-        ex1.setId(99L);
-        doReturn(Optional.of(ex1)).when(repository).findById(99L);
-       // doReturn(Optional.of(ex1)).when(repository).findById(100L);
-
-        Exercise actualExercise = service.findById(99L);
-
-        assertEquals(actualExercise.getName(),"Jumping Jacks");
-    }
-*/
-
 }
