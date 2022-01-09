@@ -82,4 +82,17 @@ public class ExerciseControllerTest {
                 .andExpect(header().exists("Location"))
                 .andExpect(header().string("Location", Matchers.equalTo("/exercises/" + exercise.getId())));
     }
+
+    @Test
+    @DisplayName("validation create exercise request")
+    void validationExercise() throws Exception {
+        String exerciseToCreate = "{\"name\": \"\", \"category\":\"arms\", \"difficulty\":\"low\", \"gear\": true}";
+
+        mockMvc.perform(
+                post("/exercises")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(exerciseToCreate)
+                )
+                .andExpect(status().isBadRequest());
+    }
 }
