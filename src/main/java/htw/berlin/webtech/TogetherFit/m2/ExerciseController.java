@@ -33,14 +33,13 @@ public class ExerciseController {
     }
 
    @PostMapping(path = "/exercises")
-    public ResponseEntity<Void> createExercise(@RequestBody ExerciseManipulationRequest request) throws URISyntaxException {
-       // add "@Valid"
+    public ResponseEntity<Void> createExercise(@Valid @RequestBody ExerciseManipulationRequest request) throws URISyntaxException {
         var exercise = exerciseService.create(request);
         URI uri = new URI("/exercises/" + exercise.getId());
         return ResponseEntity
                 .created(uri)
+                .header("Access-Control-Expose-Headers", "Location")
                 .build();
-        //.header("Access-Control-Expose-Headers", "Location")
    }
 
    @PutMapping(path = "/exercises/{id}")

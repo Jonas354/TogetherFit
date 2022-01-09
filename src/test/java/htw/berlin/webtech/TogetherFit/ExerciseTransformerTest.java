@@ -23,16 +23,16 @@ public class ExerciseTransformerTest implements WithAssertions {
         var exerciseEntity = Mockito.mock(ExerciseEntity.class);
         doReturn(123L).when(exerciseEntity).getId();
         doReturn("Push Up").when(exerciseEntity).getName();
-        doReturn("Arms").when(exerciseEntity).getCategory();
-        doReturn("Low").when(exerciseEntity).getDifficulty();
+        doReturn("arms").when(exerciseEntity).getCategory();
+        doReturn("low").when(exerciseEntity).getDifficulty();
         doReturn(true).when(exerciseEntity).getGear();
 
         var result = service.transformEntity(exerciseEntity);
 
         assertThat(result.getId()).isEqualTo(123);
         assertThat(result.getName()).isEqualTo("Push Up");
-        assertThat(result.getCategory()).isEqualTo("Arms");
-        assertThat(result.getDifficulty()).isEqualTo("Low");
+        assertThat(result.getCategory()).isEqualTo("arms");
+        assertThat(result.getDifficulty()).isEqualTo("low");
         assertThat(result.getGear()).isEqualTo(true);
     }
 

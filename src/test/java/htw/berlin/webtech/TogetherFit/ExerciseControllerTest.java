@@ -35,8 +35,8 @@ public class ExerciseControllerTest {
     @DisplayName("should return exercise from exercise service")
     void returnExercise() throws Exception {
         var exercises = List.of(
-                new Exercise(123L, "Push", "Arms", "Easy", true),
-                new Exercise(124L, "Press", "Arms", "Easy", false)
+                new Exercise(123L, "Push", "arms", "low", true),
+                new Exercise(124L, "Press", "arms", "low", false)
         );
         doReturn(exercises).when(exerciseService).findAll();
 
@@ -45,13 +45,13 @@ public class ExerciseControllerTest {
                 .andExpect(jsonPath("$.size()").value(2))
                 .andExpect(jsonPath("$[0].id").value(123))
                 .andExpect(jsonPath("$[0].name").value("Push"))
-                .andExpect(jsonPath("$[0].category").value("Arms"))
-                .andExpect(jsonPath("$[0].difficulty").value("Easy"))
+                .andExpect(jsonPath("$[0].category").value("arms"))
+                .andExpect(jsonPath("$[0].difficulty").value("low"))
                 .andExpect(jsonPath("$[0].gear").value(true))
                 .andExpect(jsonPath("$[1].id").value(124))
                 .andExpect(jsonPath("$[1].name").value("Press"))
-                .andExpect(jsonPath("$[1].category").value("Arms"))
-                .andExpect(jsonPath("$[1].difficulty").value("Easy"))
+                .andExpect(jsonPath("$[1].category").value("arms"))
+                .andExpect(jsonPath("$[1].difficulty").value("low"))
                 .andExpect(jsonPath("$[1].gear").value(false));
 
     }
@@ -68,7 +68,7 @@ public class ExerciseControllerTest {
     @Test
     @DisplayName("should return 201 and location header when creating an exercise")
     void postExercise() throws Exception {
-        String exerciseToCreate = "{\"name\": \"Push\", \"category\":\"Arms\", \"difficulty\":\"Easy\", \"gear\": true}";
+        String exerciseToCreate = "{\"name\": \"Push\", \"category\":\"arms\", \"difficulty\":\"low\", \"gear\": true}";
         var exercise = new Exercise(123L, null, null, null, true);
 
         doReturn(exercise).when(exerciseService).create(any());
