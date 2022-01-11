@@ -1,7 +1,7 @@
 [![CI](https://github.com/Jonas354/TogetherFit/actions/workflows/tests.yml/badge.svg)](https://github.com/Jonas354/TogetherFit/actions/workflows/tests.yml)
 
 
-# TogetherFit
+# TogetherFit-backend
 
 ## Die Idee
 Together Fit ist eine Webanwendung, die Sportübungen für unterschiedliche Muskelgruppen, Schwierigkeitslevel und mit oder ohne Zubehör bietet. Sie basiert auf dem Community-Prinzip, nach dem jeder Nutzer Übungen hochladen kann und von den Übungen der Anderen profitiert. Das Ende für eintönige Workouts!
