@@ -4,7 +4,7 @@
 # TogetherFit
 
 ## Die Idee
-Together Fit ist eine Webanwendung, die Sportübungen für unterschiedliche Muskelgruppen, Schwierigkeitslevel und Zubehör bietet. Sie basiert auf dem Community-Prinzip, nach dem jeder Nutzer Übungen hochladen kann und von den Übungen der Anderen profitiert. Das Ende für eintönige Workouts!
+Together Fit ist eine Webanwendung, die Sportübungen für unterschiedliche Muskelgruppen, Schwierigkeitslevel und mit oder ohne Zubehör bietet. Sie basiert auf dem Community-Prinzip, nach dem jeder Nutzer Übungen hochladen kann und von den Übungen der Anderen profitiert. Das Ende für eintönige Workouts!
 
 ## Die App
 Auf der About-Seite wird dem User die Motivation hinter der App sowie die Funktion erklärt. Mit inspirierenden Worten wird angespornt mit dem Training zu starten.
